@@ -1,2 +1,9 @@
 # InfoParser
-解析.info文件
+
+This script aims to parse .info file which was generaged by lcov.
+
+## Usage
+
+```shell
+python info_parser.py -ip xxx/.info
+```
