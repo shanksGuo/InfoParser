@@ -7,8 +7,8 @@ import shutil
 import sys
 import git
 import re
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 class InfoLine(object):
     def __init__(self, line_number, exec_count):
@@ -150,7 +150,7 @@ class InfoRecord(object):
             
     def func_list(self):
         func_list = []
-        for value in self.func_map.itervalues():
+        for value in self.func_map.values():
             func_list.append(value)
         return func_list
 
@@ -197,4 +197,4 @@ if __name__ == '__main__':
     args = readargs()
     prase_instance = InfoParser(args.infoPath)
     result = prase_instance.parse_info()
-    print result
+    print(result)
